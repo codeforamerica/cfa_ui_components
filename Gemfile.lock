@@ -415,6 +415,7 @@ DEPENDENCIES
   kamal
   listen
   lookbook
+  ostruct (~> 0.6.3)
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2, >= 8.0.2.1)

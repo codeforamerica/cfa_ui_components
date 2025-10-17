@@ -1,0 +1,13 @@
+<%= @form.hidden_field @method, value: "" %>
+<% @form.collection_checkboxes @method, @collection, @item_value_method, @item_label_method, include_hidden: false do |checkbox_item| %>
+  <div class="checkbox_item">
+    <%= checkbox_item.checkbox%>
+    <%= checkbox_item.label %>
+  </div>
+<% end %>
+
+<% if @form.object.errors[@method].any? %>
+  <p class="form_errors">
+    ⚠️ <%= @form.object.errors.full_messages_for(@method).join(", ") %>
+  </p>
+<% end %>

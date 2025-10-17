@@ -66,3 +66,13 @@ a:visited {
 .btn--fit {
     @apply w-fit;
 }
+
+.form_errors {
+    @apply text-red-500;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.field_with_errors {
+    display: inline;
+}

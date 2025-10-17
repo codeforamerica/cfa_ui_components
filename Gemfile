@@ -68,3 +68,5 @@ group :test do
 end
 
 gem "cssbundling-rails", "~> 1.4"
+
+gem "ostruct", "~> 0.6.3"
