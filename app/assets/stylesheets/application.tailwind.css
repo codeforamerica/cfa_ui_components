@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-link-unvisited: #0358A2;
+    --color-link-visited: #4C2C92;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    @apply antialiased;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+a {
+    @apply text-link-unvisited underline;
+}
+
+a:visited {
+    @apply text-link-visited;
+}
+
+.btn {
+    @apply min-w-max rounded border px-3 py-2;
+
+    a {
+        @apply text-inherit no-underline;
+    }
+}
+
+.btn--primary {
+    @apply bg-black border-none text-gray-50 px-6 py-4;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn--wide {
+    @apply w-full;
+}
+
+.btn--fit {
+    @apply w-fit;
+}

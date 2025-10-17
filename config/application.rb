@@ -23,5 +23,14 @@ module CfaLookbook
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.view_component.previews.default_layout = "component_preview"
+    config.lookbook.preview_controller = 'PreviewController'
+    config.lookbook.preview_display_options = {
+      lang: [
+        ["English", "en"],
+        ["Spanish", "es"]
+      ]
+    }
   end
 end
