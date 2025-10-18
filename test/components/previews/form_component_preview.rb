@@ -1,3 +1,5 @@
+require 'active_model'
+
 class FormComponentPreview < ViewComponent::Preview
   include ActionView::Helpers::FormHelper
   include ActionView::Helpers::FormOptionsHelper

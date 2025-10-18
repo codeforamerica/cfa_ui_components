@@ -1,6 +1,20 @@
 require_relative "boot"
 
-require "rails/all"
+require "rails"
+
+# Stripped down rails, since we don't need much
+%w(
+  action_controller/railtie
+  action_view/railtie
+  action_cable/engine
+  rails/test_unit/railtie
+).each do |railtie|
+  begin # rubocop:disable Style/RedundantBegin
+    require railtie
+  rescue LoadError
+  end
+end
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
