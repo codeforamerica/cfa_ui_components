@@ -50,6 +50,6 @@ end
 
 gem "lookbook"
 
-gem "cssbundling-rails", "~> 1.4"
-gem "view_component"
+gem "cssbundling-rails", "~> 1.0"
+gem "view_component", "~> 4.0"
 gem "ostruct", "~> 0.6.3"
