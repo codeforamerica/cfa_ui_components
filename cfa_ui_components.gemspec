@@ -13,7 +13,12 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.1.0"
   spec.licenses = "Nonstandard"  # TODO: Change this when we go public
 
-  spec.files = Dir["app/components/**/*", "app/assets/stylesheets/cfa_ui_components.tailwind.css"]
+  spec.files = Dir[
+    "lib/cfa_ui_components.rb",
+    "lib/cfa_ui_components/**/*",
+    "app/components/**/*",
+    "app/assets/stylesheets/cfa_ui_components.tailwind.css"
+  ]
   spec.require_paths = ["lib"]
 
   spec.add_dependency "rails", "~> 8.0"
