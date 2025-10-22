@@ -5,9 +5,4 @@
     <%= checkbox_item.label %>
   </div>
 <% end %>
-
-<% if @form.object.errors[@method].any? %>
-  <p class="form_errors">
-    ⚠️ <%= @form.object.errors.full_messages_for(@method).join(", ") %>
-  </p>
-<% end %>
+<%= render(FormErrorsComponent.new(form: @form, method: @method)) %>

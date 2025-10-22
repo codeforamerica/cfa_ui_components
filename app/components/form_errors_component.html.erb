@@ -1,0 +1,5 @@
+<% if @form.object.errors[@method].any? %>
+  <p class="form_errors leading-none">
+    ⚠️ <%= @form.object.errors.full_messages_for(@method).join(", ") %>
+  </p>
+<% end %>

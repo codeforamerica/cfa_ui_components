@@ -16,8 +16,10 @@ class FormComponentPreview < ViewComponent::Preview
     include ActiveModel::Model
     include ActiveModel::Attributes
 
+    attribute :first_name
     attribute :favorite_fruits
 
+    validates :first_name, presence: true
     validates :favorite_fruits, presence: true
   end
 end

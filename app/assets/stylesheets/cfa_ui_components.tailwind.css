@@ -26,6 +26,23 @@ h2 {
     font-weight: 400;
 }
 
+.label {
+    @apply text-zinc-900;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.label.required::after {
+    @apply text-red-700;
+    content: " *";
+}
+
+.help_text {
+    @apply block text-zinc-500;
+    font-size: 13px;
+    font-weight: 400;
+}
+
 ul {
     list-style-type: disc;
     list-style-position: inside;
@@ -49,7 +66,7 @@ a:visited {
 }
 
 .btn {
-    @apply block text-center min-w-max rounded border;
+    @apply block text-center rounded border m-4;
 
     a {
         @apply text-inherit no-underline;
@@ -74,16 +91,12 @@ a:visited {
     font-weight: 700;
 }
 
-.btn--wide {
-    @apply w-full;
-}
-
 .btn--fit {
     @apply w-fit;
 }
 
 .form_errors {
-    @apply text-red-500;
+    @apply text-red-500 mt-2;
     font-size: 16px;
     font-weight: 700;
 }
