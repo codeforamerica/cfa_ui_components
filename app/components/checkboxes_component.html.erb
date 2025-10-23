@@ -1,8 +1,10 @@
-<%= @form.hidden_field @method, value: "" %>
-<% @form.collection_checkboxes @method, @collection, @item_value_method, @item_label_method, include_hidden: false do |checkbox_item| %>
-  <div class="checkbox_item">
-    <%= checkbox_item.checkbox%>
-    <%= checkbox_item.label %>
-  </div>
-<% end %>
-<%= render(FormErrorsComponent.new(form: @form, method: @method)) %>
+<div class="form_component">
+  <%= @form.hidden_field @method, value: "" %>
+  <%= @form.collection_checkboxes @method, @collection, @item_value_method, @item_label_method, include_hidden: false do |checkbox_item| %>
+    <div class="checkbox_item">
+      <%= checkbox_item.checkbox%>
+      <%= checkbox_item.label %>
+    </div>
+  <% end %>
+  <%= render(FormErrorsComponent.new(form: @form, method: @method)) %>
+</div>

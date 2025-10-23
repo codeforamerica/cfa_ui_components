@@ -1,0 +1,8 @@
+<%= form_with url: "/", method: :post, model: FormComponentPreview::TestModel.new do |f| %>
+
+  <%= render TextFieldComponent.new(form: f, method: :first_name, label: I18n.t(:first_name)) %>
+  <%= render TextFieldComponent.new(form: f, method: :last_name, label: I18n.t(:last_name)) %>
+  <%= render CheckboxesComponent.new(form: f, method: :favorite_fruits, collection: FormComponentPreview.fruit_options, item_value_method: :value, item_label_method: :label) %>
+  <%= render SubmitButtonComponent.new(form: f) %>
+
+<% end %>

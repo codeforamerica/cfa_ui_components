@@ -65,6 +65,10 @@ a:visited {
     }
 }
 
+form {
+    @apply space-y-6;
+}
+
 .btn {
     @apply block text-center rounded border m-4;
 
