@@ -70,7 +70,7 @@ form {
 }
 
 .btn {
-    @apply block text-center rounded border m-4;
+    @apply block text-center rounded border;
 
     a {
         @apply text-inherit no-underline;
@@ -93,10 +93,6 @@ form {
     @apply px-6 py-4;
     font-size: 22px;
     font-weight: 700;
-}
-
-.btn--fit {
-    @apply w-fit;
 }
 
 .form_errors {
