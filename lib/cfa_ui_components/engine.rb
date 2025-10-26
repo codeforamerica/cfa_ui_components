@@ -6,6 +6,13 @@ module CfaUiComponents
   class Engine < ::Rails::Engine
     isolate_namespace CfaUiComponents
 
+    initializer "disable .field_with_errors" do |app|
+      puts "disabling .field_with_errors wrapper (in engine)"
+      ActionView::Base.field_error_proc = proc do |html_tag, instance|
+        html_tag.html_safe
+      end
+    end
+
     initializer "cfa_ui_components.assets" do |app|
       if app.config.respond_to?(:assets)
         source_path = "#{root}/app/assets/stylesheets/cfa_ui_components.tailwind.css"

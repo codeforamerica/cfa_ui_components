@@ -13,7 +13,19 @@ body {
     font-size: 16px;
     font-weight: 400;
 
-    @apply antialiased;
+    @apply antialiased leading-none;
+}
+
+main {
+    @apply bg-white mx-auto w-full max-w-[368px] md:max-w-[688px] xl:max-w-[944px] 2xl:max-w-[1072px] px-4 py-8 space-y-8;
+}
+
+form {
+    @apply space-y-8;
+}
+
+.form_component {
+    @apply space-y-2;
 }
 
 h1 {
@@ -65,10 +77,6 @@ a:visited {
     }
 }
 
-form {
-    @apply space-y-6;
-}
-
 .btn {
     @apply block text-center rounded border;
 
@@ -90,13 +98,13 @@ form {
 }
 
 .btn--large {
-    @apply px-6 py-4;
+    @apply px-6 py-4 w-fit place-self-center;
     font-size: 22px;
     font-weight: 700;
 }
 
 .form_errors {
-    @apply text-red-500 mt-2;
+    @apply text-red-500;
     font-size: 16px;
     font-weight: 700;
 }
