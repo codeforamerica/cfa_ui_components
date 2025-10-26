@@ -18,11 +18,19 @@ class FormComponentPreview < ViewComponent::Preview
 
     attribute :first_name
     attribute :last_name
+    attribute :pineapple_pizza_preference
     attribute :favorite_fruits
 
     validates :first_name, presence: true
     validates :last_name, presence: true
+    validates :pineapple_pizza_preference, presence: true
     validates :favorite_fruits, presence: true
+  end
+
+  def self.yes_no_options
+    [OpenStruct.new(value: "yes", label: "Yes"),
+     OpenStruct.new(value: "no", label: "No")]
+
   end
 
   def self.fruit_options
