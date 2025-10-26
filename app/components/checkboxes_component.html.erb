@@ -1,10 +1,13 @@
 <div class="form_component">
   <%= @form.hidden_field @method, value: "" %>
-  <%= @form.collection_checkboxes @method, @collection, @item_value_method, @item_label_method, include_hidden: false do |checkbox_item| %>
-    <div class="checkbox_item">
-      <%= checkbox_item.checkbox%>
-      <%= checkbox_item.label %>
-    </div>
-  <% end %>
+  <% content = capture {
+    @form.collection_checkboxes(@method, @collection, @item_value_method, @item_label_method) do |checkbox_item|
+      content_tag :div, class: "checkbox_item" do
+        concat checkbox_item.checkbox
+        concat checkbox_item.label
+      end
+    end
+  } %>
+  <% concat content %>
   <%= render(FormErrorsComponent.new(form: @form, method: @method)) %>
 </div>
