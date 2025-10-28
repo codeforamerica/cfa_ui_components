@@ -82,7 +82,7 @@ a:visited {
 }
 
 .btn {
-    @apply block text-center rounded border;
+    @apply block text-center rounded border cursor-pointer;
 
     a {
         @apply text-inherit no-underline;
