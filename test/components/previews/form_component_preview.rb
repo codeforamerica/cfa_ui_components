@@ -1,4 +1,4 @@
-require 'active_model'
+require "active_model"
 
 class FormComponentPreview < ViewComponent::Preview
   include ActionView::Helpers::FormHelper
@@ -28,14 +28,13 @@ class FormComponentPreview < ViewComponent::Preview
   end
 
   def self.yes_no_options
-    [OpenStruct.new(value: "yes", label: "Yes"),
-     OpenStruct.new(value: "no", label: "No")]
-
+    [ OpenStruct.new(value: "yes", label: "Yes"),
+     OpenStruct.new(value: "no", label: "No") ]
   end
 
   def self.fruit_options
-    [OpenStruct.new(value: "orange", label: "Orange"),
+    [ OpenStruct.new(value: "orange", label: "Orange"),
      OpenStruct.new(value: "banana", label: "Banana"),
-     OpenStruct.new(value: "apple", label: "Apple")]
+     OpenStruct.new(value: "apple", label: "Apple") ]
   end
 end

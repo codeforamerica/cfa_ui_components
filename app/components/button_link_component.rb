@@ -5,12 +5,12 @@ class ButtonLinkComponent < ViewComponent::Base
     @label = label
     @url = url
     @button_style = case style
-                    when :primary
+    when :primary
                       "btn--primary"
-                    when :secondary
+    when :secondary
                       "btn--secondary"
-                    else
+    else
                       raise ArgumentError("Invalid button style")
-                    end
+    end
   end
 end

@@ -3,12 +3,12 @@ require_relative "boot"
 require "rails"
 
 # Stripped down rails, since we don't need much
-%w(
+%w[
   action_controller/railtie
   action_view/railtie
   action_cable/engine
   rails/test_unit/railtie
-).each do |railtie|
+].each do |railtie|
   begin # rubocop:disable Style/RedundantBegin
     require railtie
   rescue LoadError
@@ -39,11 +39,11 @@ module CfaUiComponents
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.view_component.previews.default_layout = "component_preview"
-    config.lookbook.preview_controller = 'PreviewController'
+    config.lookbook.preview_controller = "PreviewController"
     config.lookbook.preview_display_options = {
       lang: [
-        ["English", "en"],
-        ["Spanish", "es"]
+        [ "English", "en" ],
+        [ "Spanish", "es" ]
       ]
     }
   end
