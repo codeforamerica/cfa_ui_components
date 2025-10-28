@@ -3,13 +3,13 @@
 require_relative "lib/cfa_ui_components/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "cfa_ui_components"
+  spec.name = "cfa-ui-components"
   spec.version = CfaUiComponents::VERSION
   spec.authors = ["Mike Rotondo"]
   spec.email = ["mrotondo@codeforamerica.org"]
 
   spec.summary = "For when you want to have your UI be components"
-  spec.homepage = "https://github.com/codeforamerica/cfa_ui_components/blob/main/README.md"
+  spec.homepage = "https://github.com/codeforamerica/cfa-ui-components/blob/main/README.md"
   spec.required_ruby_version = ">= 3.1.0"
   spec.licenses = "Nonstandard"  # TODO: Change this when we go public
 
