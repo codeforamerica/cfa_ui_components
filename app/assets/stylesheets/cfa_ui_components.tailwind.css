@@ -24,10 +24,6 @@ form {
     @apply space-y-8;
 }
 
-.form_component {
-    @apply space-y-4;
-}
-
 .radio_button_item {
     @apply space-x-2;
 }
