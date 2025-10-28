@@ -25,7 +25,15 @@ form {
 }
 
 .form_component {
-    @apply space-y-2;
+    @apply space-y-4;
+}
+
+.radio_button_item {
+    @apply space-x-2;
+}
+
+.checkbox_item {
+    @apply space-x-2;
 }
 
 h1 {
