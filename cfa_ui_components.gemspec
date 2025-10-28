@@ -3,7 +3,7 @@
 require_relative "lib/cfa_ui_components/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "cfa-ui-components"
+  spec.name = "cfa_ui_components"
   spec.version = CfaUiComponents::VERSION
   spec.authors = ["Mike Rotondo"]
   spec.email = ["mrotondo@codeforamerica.org"]
