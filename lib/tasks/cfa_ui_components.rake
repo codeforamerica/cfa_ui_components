@@ -3,8 +3,8 @@ namespace :cfa_ui_components do
   task copy_gem_styles: :environment do
     gem_spec = Gem.loaded_specs["cfa_ui_components"]
     if gem_spec
-      source = File.join(gem_spec.full_gem_path, 'app/assets/stylesheets/cfa_ui_components.tailwind.css')
-      dest = Rails.root.join('app/assets/stylesheets/vendor/cfa_ui_components.tailwind.css')
+      source = File.join(gem_spec.full_gem_path, "app/assets/stylesheets/cfa_ui_components.tailwind.css")
+      dest = Rails.root.join("app/assets/stylesheets/vendor/cfa_ui_components.tailwind.css")
 
       FileUtils.mkdir_p(File.dirname(dest))
       Tempfile.open do |temp_file|
