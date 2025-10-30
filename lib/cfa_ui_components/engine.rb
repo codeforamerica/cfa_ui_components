@@ -12,6 +12,5 @@ module CfaUiComponents
         html_tag.html_safe
       end
     end
-
   end
 end
