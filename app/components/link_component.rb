@@ -19,11 +19,12 @@ class LinkComponent < ViewComponent::Base
   end
 
   def icon_alt_text
-    case @icon
+    descriptor = case @icon
     when "info"
-      "info circle"
+      "info"
     else
       ""
     end
+    descriptor + " icon"
   end
 end
