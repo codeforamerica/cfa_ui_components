@@ -1,0 +1,5 @@
+<div class="space-y-4">
+  <%= @form.label @method, @label, class: "label block #{required_class}" %>
+  <%= @form.collection_select @method, @collection, @item_value_method, @item_label_method, prompt: "- Select -" %>
+  <%= render(FormErrorsComponent.new(form: @form, method: @method)) %>
+</div>
